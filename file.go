@@ -13,18 +13,15 @@ type Node interface {
 
 type File interface {
 	Node
-
 	Bytes() []byte
 }
 
 type Dir interface {
 	Node
-
 	It() DirIterator
 }
 
 type DirIterator interface {
 	Next() bool
-
 	Node() Node
 }
